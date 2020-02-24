@@ -1,0 +1,422 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>dom操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tab切换.html" />
+    
+    
+    <link rel="prev" href="浅分析JS.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="类型分析.html">
+            
+                <a href="类型分析.html">
+            
+                    
+                    JS类型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="浅分析JS.html">
+            
+                <a href="浅分析JS.html">
+            
+                    
+                    浅分析JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="dom操作.html">
+            
+                <a href="dom操作.html">
+            
+                    
+                    dom操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="tab切换.html">
+            
+                <a href="tab切换.html">
+            
+                    
+                    tab切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="判断语句.html">
+            
+                <a href="判断语句.html">
+            
+                    
+                    判断语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="循环语句.html">
+            
+                <a href="循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="数据类型.html">
+            
+                <a href="数据类型.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="数组方法.html">
+            
+                <a href="数组方法.html">
+            
+                    
+                    数组方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >dom操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x83B7;&#x53D6;&#x9875;&#x9762;&#x4E2D;&#x7684;dom&#x5143;&#x7D20;">&#x83B7;&#x53D6;&#x9875;&#x9762;&#x4E2D;&#x7684;DOM&#x5143;&#x7D20;</h3>
+<p>document.getElementById</p>
+<blockquote>
+<p>&#x5728;&#x6574;&#x4E2A;&#x6587;&#x6863;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x5143;&#x7D20;&#x7684;ID&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x5BF9;&#x8C61;</p>
+<p>getElementById&#x662F;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;document&#x9650;&#x5B9A;&#x4E86;&#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x6211;&#x95E8;&#x628A;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x79F0;&#x4E4B;&#x4E3A;&#xFF1A;&#x201C;&#x4E0A;&#x4E0B;&#x6587;&#x3010;context&#x3011;&#x201D;
+```javascript</p>
+<ol>
+<li>&#x901A;&#x8FC7;getElementById&#x83B7;&#x53D6;&#x7684;&#x5143;&#x7D20;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF08;&#x91CC;&#x9762;&#x5305;&#x542B;&#x4E86;&#x5F88;&#x591A;&#x5185;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#xFF09;
+typeof oBox =&gt; &quot;object&quot;</li>
+</ol>
+</blockquote>
+<ol>
+<li>&#x5206;&#x6790;&#x5305;&#x542B;&#x7684;&#x5C5E;&#x6027;
+classNmae&#xFF1A;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4EE3;&#x8868;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x7684;&#x6837;&#x5F0F;&#x7C7B;&#x540D;</li>
+</ol>
+<p>id:&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;id&#x503C;&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</p>
+<p>innerHtml&#xFF1A;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x5305;&#x542B;HTML&#x6807;&#x7B7E;&#xFF09;</p>
+<p>innerHtml&#xFF1A;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#xFF08;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x6807;&#x7B7E;&#xFF09;</p>
+<p>onclick:&#x5143;&#x7D20;&#x7684;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5C5E;&#x6027;&#xFF0C;&#x57FA;&#x4E8E;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;
+onmouseover:&#x9F20;&#x6807;&#x6ED1;&#x8FC7;&#x4E8B;&#x4EF6;
+onmouseout&#xFF1A;&#x9F20;&#x6807;&#x79BB;&#x5F00;&#x4E8B;&#x4EF6;</p>
+<p>style&#xFF1A;&#x5B58;&#x50A8;&#x5728;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x6240;&#x6709;&#x7684;&#x201C;&#x884C;&#x5185;&#x6837;&#x5F0F;&#x201D;&#x503C;&#xFF08;&#x83B7;&#x53D6;&#x548C;&#x64CD;&#x4F5C;&#x7684;&#x90FD;&#x53EA;&#x80FD;&#x662F;&#x5199;&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x7684;&#x884C;&#x5185;&#x6837;&#x5F0F;&#xFF0C;&#x5199;&#x5728;&#x6837;&#x5F0F;&#x8868;&#x4E2D;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x65E0;&#x6CD5;&#x57FA;&#x4E8E;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x83B7;&#x53D6;&#x5230;&#xFF09;</p>
+<p>&#x83B7;&#x53D6;&#x5143;&#x7D20;className</p>
+<p><li class="oldclass"></li>
+li[&quot;className&quot;]==li.className
+&#x6DFB;&#x52A0;&#x7C7B;&#x540D;
+li[&quot;className&quot;] =&quot;oldclass newclass&quot;
+li[&quot;className&quot;] += &quot; newclass&quot;//&#x8FD9;&#x91CC;&#x65B0;&#x7C7B;&#x540D;&#x4E4B;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x52A0;&#x7A7A;&#x683C;</p>
+<pre><code>[context].getElementsByTagName
+&gt; &#x5728;&#x6307;&#x5B9A;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x5143;&#x7D20;&#x7684;&#x6807;&#x7B7E;&#x540D;&#x83B7;&#x53D6;&#x4E00;&#x7EC4;&#x5143;&#x7D20;&#x96C6;&#x5408;
+&gt;
+&gt;&#x4E0A;&#x4E0B;&#x6587;&#x662F;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x6765;&#x6307;&#x5B9A;&#x7684;
+
+```javascript
+var boxList =
+oBox.getElementsByTagNmae(&quot;li&quot;);
+
+1. &#x83B7;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x96C6;&#x5408;&#xFF08;HTMLCollection&#xFF09;,&#x5148;&#x5B83;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x7ED3;&#x6784;&#x548C;&#x6570;&#x7EC4;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF08;&#x6570;&#x5B57;&#x4F5C;&#x4E3A;&#x7D22;&#x5F15;&#xFF0C;length&#x4EE3;&#x8868;&#x957F;&#x5EA6;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x4ED6;&#x53EB;&#x505A;&#x201C;&#x7C7B;&#x6570;&#x7EC4;&#x201D;
+
+boxList[0] &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;LI&#xFF08;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x83B7;&#x53D6;&#x5230;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E00;&#x4E2A;LI&#x5373;&#x53EF;&#xFF09;
+boxList.length &#x83B7;&#x53D6;&#x96C6;&#x5408;&#x4E2D;&#x7684;LI&#x7684;&#x6570;&#x91CF;
+
+2. &#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x5B58;&#x50A8;&#x7684;&#x503C;&#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5BF9;&#x8C61;&#xFF08;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x542B;&#x5F88;&#x591A;&#x7684;&#x5185;&#x7F6E;&#x5C5E;&#x6027;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;id/className...&#xFF09;
+
+boxList[1].style.color=&quot;red&quot;;&#x4FEE;&#x6539;&#x96C6;&#x5408;&#x4E2D;&#x7B2C;&#x4E8C;&#x4E2A;LI&#x7684;&#x6587;&#x5B57;&#x989C;&#x8272;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="浅分析JS.html" class="navigation navigation-prev " aria-label="Previous page: 浅分析JS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tab切换.html" class="navigation navigation-next " aria-label="Next page: tab切换">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"dom操作","level":"1.2.3","depth":2,"next":{"title":"tab切换","level":"1.2.4","depth":2,"path":"JavaScript/tab切换.md","ref":"JavaScript/tab切换.md","articles":[]},"previous":{"title":"浅分析JS","level":"1.2.2","depth":2,"path":"JavaScript/浅分析JS.md","ref":"JavaScript/浅分析JS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScript/dom操作.md","mtime":"2020-02-22T15:19:06.350Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-23T01:49:05.274Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

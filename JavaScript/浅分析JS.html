@@ -1,0 +1,432 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>浅分析JS · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dom操作.html" />
+    
+    
+    <link rel="prev" href="类型分析.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="类型分析.html">
+            
+                <a href="类型分析.html">
+            
+                    
+                    JS类型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="浅分析JS.html">
+            
+                <a href="浅分析JS.html">
+            
+                    
+                    浅分析JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="dom操作.html">
+            
+                <a href="dom操作.html">
+            
+                    
+                    dom操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="tab切换.html">
+            
+                <a href="tab切换.html">
+            
+                    
+                    tab切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="判断语句.html">
+            
+                <a href="判断语句.html">
+            
+                    
+                    判断语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="循环语句.html">
+            
+                <a href="循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="数据类型.html">
+            
+                <a href="数据类型.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="数组方法.html">
+            
+                <a href="数组方法.html">
+            
+                    
+                    数组方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >浅分析JS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>/<em>
+</em>&#x6D45;&#x5206;&#x6790;JS&#x7684;&#x8FD0;&#x884C;&#x673A;&#x5236;</p>
+<ul>
+<li>1.&#x5F53;&#x6D4F;&#x89C8;&#x5668;&#xFF08;&#x5B83;&#x7684;&#x5185;&#x6838;\&#x5F15;&#x64CE;&#xFF09;&#x6E32;&#x67D3;&#x548C;&#x89E3;&#x6790;JS&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x4F9B;JS&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#x79F0;&#x4E4B;&#x4E3A;&quot;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&quot;&#xFF08;&quot;global&quot;/&quot;window&quot; scope&#xFF09;
+*</li>
+<li>2.&#x4EE3;&#x7801;&#x81EA;&#x4E0A;&#x800C;&#x884C;&#x6267;&#x884C;&#xFF08;&#x5728;&#x6B64;&#x4E4B;&#x524D;&#x8FD8;&#x6709;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x9636;&#x6BB5;&#xFF09;</li>
+<li>=&gt;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4F1A;&#x5B58;&#x50A8;&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;    ==&gt;&#x6808;&#x5185;&#x5B58;&#xFF08;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4F9B;JS&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x7684;&#x73AF;&#x5883; &#x6240;&#x6709;&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x4F1A;&#x76F4;&#x63A5;&#x7684;&#x5728;&#x6808;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF09;</li>
+<li>var a = 12;</li>
+<li>1)&#x9996;&#x5148;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x7A7A;&#x95F4;12</li>
+<li>2)&#x5728;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;a(var a)</li>
+<li>3)&#x8BA9;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x5B58;&#x50A8;&#x7684;12&#x8FDB;&#x884C;&#x5173;&#x8054;&#xFF08;&#x628A;&#x5B58;&#x50A8;&#x7684;12&#x8D4B;&#x503C;&#x7ED9;a</li>
+<li>=&gt;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x505A;&#x53EB;&#x505A;&#x5B9A;&#x4E49;&#xFF09;
+*</li>
+<li>var b=a</li>
+<li>b=&gt;&#x65B0;&#x7684;12&#xFF1B;&#x6B64;&#x65F6;&#x7684;a/b&#x6CA1;&#x6709;&#x5173;&#x7CFB;</li>
+<li>&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;&#x4E5F;&#x53EB;&#x505A;&#x503C;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;&#x662F;&#x6309;&#x7167;&#x503C;&#x6765;&#x64CD;&#x4F5C;&#x7684;&#xFF1A;&#x628A;&#x539F;&#x6765;&#x7684;&#x503C;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#xFF0C;&#x653E;&#x5230;&#x65B0;&#x7684;&#x7A7A;&#x95F4;&#x6216;&#x8005;&#x4F4D;&#x7F6E;&#x4E0A;&#xFF0C;&#x548C;&#x539F;&#x6765;&#x7684;&#x503C;&#x6CA1;&#x6709;&#x5173;&#x7CFB;</li>
+<li>b=13</li>
+<li>&#x65B0;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x7A7A;&#x95F4;&#x5B58;13&#xFF0C;&#x8BA9;b&#x548C;13&#x5173;&#x8054;</li>
+<li>&#x5982;&#x679C;&#x7A7A;&#x95F4;&#x6CA1;&#x6709;&#x88AB;&#x5360;&#x7528;&#x5219;&#x88AB;&#x9500;&#x6BC1;=&gt;&#x539F;&#x6765;&#x548C;b&#x5173;&#x8054;&#x7684;12&#x88AB;&#x9500;&#x6BC1;</li>
+</ul>
+<hr>
+<ul>
+<li>=&gt;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5B58;&#x50A8;&#x5728;&#x5F53;&#x524D;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;&#xFF08;&#x56E0;&#x4E3A;&#x53EF;&#x80FD;&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;&#x8FC7;&#x4E8E;&#x590D;&#x6742;&#xFF09;&#xFF0C;</li>
+<li>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7A7A;&#x95F4;&#xFF08;&#x7406;&#x89E3;&#x4E3A;&#x4ED3;&#x5E93;&#xFF09;&#xFF0C;&#x628A;&#x5185;&#x5BB9;&#x5B58;&#x50A8;&#x5230;&#x8FD9;&#x4E2A;&#x7A7A;&#x95F4;&#x4E2D;      ==&gt;&#x5806;&#x5185;&#x5B58;&#xFF08;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x503C;&#x7684; &#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x952E;&#x503C;&#x5BF9; &#x51FD;&#x6570;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x4EE3;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</li>
+<li>var obj1 = {n:100};</li>
+<li>1)&#x9996;&#x5148;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x628A;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x4F9D;&#x6B21;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#xFF08;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x7A7A;&#x95F4;&#xFF0C;&#x6B64;&#x7A7A;&#x95F4;&#x6709;&#x4E00;&#x4E2A;16&#x8FDB;&#x5236;&#x7684;&#x5730;&#x5740;&#xFF09;</li>
+<li>2&#xFF09;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</li>
+<li>3&#xFF09;&#x8BA9;&#x53D8;&#x91CF;&#x548C;&#x7A7A;&#x95F4;&#x5730;&#x5740;&#x5173;&#x8054;&#x5728;&#x4E00;&#x8D77;&#xFF08;&#x628A;&#x7A7A;&#x95F4;&#x5730;&#x5740;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF;&#xFF09;</li>
+<li>&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x4E0D;&#x662F;&#x6309;&#x7167;&#x503C;&#x6765;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x4ED6;&#x64CD;&#x4F5C;&#x7684;&#x662F;&#x7A7A;&#x95F4;&#x7684;&#x5F15;&#x7528;&#x5730;&#x5740;&#xFF1A;&#x628A;&#x539F;&#x6765;&#x7A7A;&#x95F4;&#x7684;&#x5730;&#x5740;&#x590D;&#x5236;&#x4E2A;&#x65B0;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x539F;&#x6765;&#x7684;&#x7A7A;&#x95F4;&#x6CA1;&#x6709;&#x88AB;&#x514B;&#x9686;&#xFF0C;</li>
+<li>&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x5173;&#x8054;&#x7684;&#x76F8;&#x540C;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x5C31;&#x4F1A;&#x5B58;&#x5728;&#x5F71;&#x54CD;&#x4E86;</li>
+<li>var obj2 = obj1          =&gt;&#x516C;&#x7528;&#x4E00;&#x4E2A;&#x7A7A;&#x95F4;</li>
+<li>obj2[&quot;n&quot;]=200;           =&gt;obj1={n:200}</li>
+<li>*/</li>
+</ul>
+<hr>
+<p>&#x8BFE;&#x540E;&#x7EC3;&#x4E60;
+var obj = {
+    n: 10,
+    m: obj.n <em> 10
+}
+console.log(obj.m); //Uncaught TypeError: Cannot read property &apos;n&apos; of undefined
+/</em>
+1.&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#xFF08;&#x6808;&#x5185;&#x5B58;&#xFF09;
+2.&#x4EE3;&#x7801;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x6267;&#x884C;
+3.1&#x9996;&#x5148;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5806;&#x5185;&#x5B58;&#xFF08;AAAFFF111&#xFF09;&#xFF0C;&#x628A;&#x952E;&#x503C;&#x5BF9;&#x5B58;&#x50A8;&#x5230;&#x5806;&#x5185;&#x5B58;&#x4E2D;
+    n:10
+    m:obj.n<em>10 -&gt;obj.n &#x662F;undefined&#xFF0C;obj.n&lt;-&gt;undefined.n
+</em>/
+var ary1 = [3, 4]; //&#x9996;&#x5148;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5806;&#x5185;&#x5B58;&#xFF08;AAAFFF111&#xFF09;&#xFF0C;&#x628A;[3, 4]&#x5B58;&#x50A8;&#x5230;&#x5806;&#x5185;&#x5B58;&#x4E2D;,&#x628A;AAAFFF111&#x5B58;&#x50A8;&#x5230;ary1&#x4E2D;
+var ary2 = ary1; //&#x628A;AAAFFF111&#x5B58;&#x50A8;&#x5230;ary2&#x4E2D;
+ary2[0] = 1; //&#x73B0;&#x5728;ary1&#x548C;ary2&#x6307;&#x5411;&#x7684;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x64CD;&#x4F5C;&#x7684;&#x662F;&#x540C;&#x4E00;&#x7EC4;&#x6570;&#x636E;-&gt;[1,4]
+ary2 = [4, 5]; //&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5806;&#x5185;&#x5B58;&#xFF08;AAAFFF222&#xFF09;,&#x628A;[4, 5]&#x5B58;&#x50A8;&#x5230;&#x5806;&#x5185;&#x5B58;&#x4E2D;,&#x628A;AAAFFF222&#x5B58;&#x50A8;&#x5230;ary2&#x4E2D;
+ary2[1] = 2; //[4,5]-&gt;[4,2]
+ary1[1] = 0; //[1,4]-&gt;[1,0]</p>
+<p>console.log(ary1, ary2)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="类型分析.html" class="navigation navigation-prev " aria-label="Previous page: JS类型分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dom操作.html" class="navigation navigation-next " aria-label="Next page: dom操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"浅分析JS","level":"1.2.2","depth":2,"next":{"title":"dom操作","level":"1.2.3","depth":2,"path":"JavaScript/dom操作.md","ref":"JavaScript/dom操作.md","articles":[]},"previous":{"title":"JS类型分析","level":"1.2.1","depth":2,"path":"JavaScript/类型分析.md","ref":"JavaScript/类型分析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScript/浅分析JS.md","mtime":"2020-02-22T15:19:06.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-23T01:49:05.274Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

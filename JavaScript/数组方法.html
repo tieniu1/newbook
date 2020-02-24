@@ -1,0 +1,663 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组方法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="数据类型.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="类型分析.html">
+            
+                <a href="类型分析.html">
+            
+                    
+                    JS类型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="浅分析JS.html">
+            
+                <a href="浅分析JS.html">
+            
+                    
+                    浅分析JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="dom操作.html">
+            
+                <a href="dom操作.html">
+            
+                    
+                    dom操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="tab切换.html">
+            
+                <a href="tab切换.html">
+            
+                    
+                    tab切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="函数.html">
+            
+                <a href="函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="判断语句.html">
+            
+                <a href="判断语句.html">
+            
+                    
+                    判断语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="循环语句.html">
+            
+                <a href="循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="数据类型.html">
+            
+                <a href="数据类型.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="数组方法.html">
+            
+                <a href="数组方法.html">
+            
+                    
+                    数组方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数组方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x6570;&#x7EC4;&#x65B9;&#x6CD5;">&#x6570;&#x7EC4;&#x65B9;&#x6CD5;</h3>
+<p>&#x6570;&#x7EC4;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x4E5F;&#x662F;&#x7531;&#x952E;&#x503C;&#x5BF9;&#x7EC4;&#x6210;&#x7684;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary =[<span class="hljs-number">12</span>,<span class="hljs-number">23</span>,<span class="hljs-number">34</span>]
+<span class="hljs-comment">/*
+ &#x7ED3;&#x6784;&#xFF1A;
+  0:12,
+  1:23,
+  2:34,
+  length:3
+*/</span>
+<span class="hljs-number">1.</span>&#x4EE5;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x7D22;&#x5F15;&#xFF08;&#x5C5E;&#x6027;&#x540D;&#xFF09;&#xFF0C;&#x7D22;&#x5F15;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x9012;&#x589E;
+<span class="hljs-number">2.</span>&#x6709;&#x4E00;&#x4E2A;length&#x5C5E;&#x6027;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x6570;&#x7EC4;&#x957F;&#x5EA6;
+
+ary[<span class="hljs-number">0</span>] &#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x9879;
+ary[ary.length<span class="hljs-number">-1</span>] &#x83B7;&#x53D6;&#x6700;&#x540E;&#x4E00;&#x9879;
+</code></pre>
+<p>&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E00;&#x9879;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//=&gt;&#x591A;&#x7EF4;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">var</span> ary =[
+    {
+        name:<span class="hljs-string">&apos;xxx&apos;</span>,
+        age:<span class="hljs-number">20</span>
+    },
+    {
+        name:<span class="hljs-string">&apos;xxx&apos;</span>,
+        age:<span class="hljs-number">20</span>
+    }
+];
+</code></pre>
+<h3 id="&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;">&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h3>
+<blockquote>
+<p>&#x6309;&#x7167;&#x56DB;&#x4E2A;&#x7EF4;&#x5EA6;&#x8BB0;&#x5FC6;&#xFF1A;</p>
+<ul>
+<li>&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;</li>
+<li>&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;</li>
+<li>&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x662F;&#x662F;&#x5426;&#x6539;&#x53D8;</li>
+</ul>
+</blockquote>
+<p><strong>push()</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5411;&#x6570;&#x7EC4;&#x2018;&#x672B;&#x5C3E;&#x2019;&#x8FFD;&#x52A0;&#x65B0;&#x7684;&#x5185;&#x5BB9;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x8FFD;&#x52A0;&#x65B0;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#xFF0C;&#x4E5F;&#x53EF;&#x662F;&#x591A;&#x4E2A;&#xFF09;</p>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x65B0;&#x589E;&#x540E;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x6539;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">12</span>,<span class="hljs-number">23</span>,<span class="hljs-number">34</span>];
+ary.push(<span class="hljs-number">56</span>); <span class="hljs-comment">//=&gt; len:4  ary:[12,23,34,56];</span>
+ary.push(<span class="hljs-number">100</span>,{name:<span class="hljs-string">&apos;xxx&apos;</span>}); <span class="hljs-comment">//=&gt; len:6 ary:[12,23,34,56,100,{name:&apos;xxx&apos;}]</span>
+</code></pre>
+<p><strong>pop()</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5220;&#x9664;&#x6570;&#x7EC4;&#x6700;&#x540E;&#x4E00;&#x9879;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x65E0;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x88AB;&#x5220;&#x9664;&#x7684;&#x90A3;&#x4E00;&#x9879;&#x5185;&#x5BB9;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x6539;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary =[<span class="hljs-number">12</span>,<span class="hljs-number">23</span>,<span class="hljs-number">34</span>];
+ary.pop();<span class="hljs-comment">//&#x8FD4;&#x56DE;34&#x3002;</span>
+<span class="hljs-comment">//len&#xFF1A;2 ary:[12,23]</span>
+</code></pre>
+<p><strong>shift()</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x9879;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x65E0;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x88AB;&#x5220;&#x9664;&#x7684;&#x90A3;&#x4E00;&#x9879;&#x5185;&#x5BB9;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x6539;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">12</span>,<span class="hljs-number">23</span>,<span class="hljs-number">34</span>];
+ary.shift() <span class="hljs-comment">//&#x8FD4;&#x56DE;12 </span>
+<span class="hljs-comment">// len&#xFF1A;2 ary:[23,34]</span>
+&#x57FA;&#x4E8E;shift&#x5220;&#x9664;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x9879;&#xFF0C;&#x7B2C;&#x4E00;&#x9879;&#x88AB;&#x5220;&#x9664;&#x540E;&#xFF0C;&#x539F;&#x6709;&#x540E;&#x9762;&#x6BCF;&#x4E00;&#x9879;&#x7684;&#x7D22;&#x5F15;&#x90FD;&#x8981;&#x5411;&#x524D;&#x51CF;<span class="hljs-number">1</span>&#xFF08;&#x5F80;&#x524D;&#x63D0;&#x4E00;&#x4F4D;&#xFF09;
+</code></pre>
+<p><strong>unshift()</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x60F3;&#x6570;&#x7EC4;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x8FFD;&#x52A0;&#x65B0;&#x5185;&#x5BB9;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x65B0;&#x589E;&#x7684;&#x5185;&#x5BB9;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x65B0;&#x589E;&#x540E;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x6539;&#x53D8;    </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">12</span>,<span class="hljs-number">23</span>,<span class="hljs-number">34</span>];
+ary.unshift(<span class="hljs-number">100</span>,<span class="hljs-literal">true</span>); <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x6DFB;&#x52A0;&#x5B8C;&#x4E4B;&#x540E;&#x7684;&#x957F;&#x5EA6; len&#xFF1A;5</span>
+<span class="hljs-comment">// ary:[100,true,12,23,34]</span>
+</code></pre>
+<p><strong>splice</strong></p>
+<p>&#x57FA;&#x4E8E;splice&#x53EF;&#x4EE5;&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x5F88;&#x591A;&#x7684;&#x64CD;&#x4F5C;&#xFF1A;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x5185;&#x5BB9;&#x3001;&#x5411;&#x6570;&#x7EC4;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x589E;&#x52A0;&#x5185;&#x5BB9;&#x3001;&#x8FD8;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x4FE1;&#x606F;</p>
+<p><code>&#x5220;&#x9664;&#xFF1A;ary.splice(n,m)</code></p>
+<p>&#x4ECE;&#x7D22;&#x5F15;n&#x5F00;&#x59CB;&#xFF0C;&#x5220;&#x9664;m&#x4E2A;&#x5185;&#x5BB9;&#xFF0C;&#x628A;&#x5220;&#x9664;&#x90E8;&#x5206;&#x4EE5;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#x8FD4;&#x56DE;&#xFF0C;&#x539F;&#x6709;&#x6570;&#x7EC4;&#x6539;&#x53D8;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;m&#x6216;&#x8005;m&#x5927;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5219;&#x5220;&#x9664;&#x5230;&#x672B;&#x5C3E;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+ary.splice(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>);<span class="hljs-comment">//&#x4ECE;&#x7D22;&#x5F15;2&#x5F00;&#x59CB;&#x5220;&#x9664;&#xFF0C;&#x5305;&#x62EC;2&#xFF0C;&#x5220;&#x9664;3&#x4E2A;&#x3002;</span>
+<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;[2,3,4]  &#x6539;&#x53D8;&#x539F;&#x6765;&#x6570;&#x7EC4;ary:[0,1,5,6]</span>
+ary.splice(<span class="hljs-number">2</span>);<span class="hljs-comment">//&#x4ECE;&#x7D22;&#x5F15;2&#x5F00;&#x59CB;&#x5220;&#x9664;&#x5230;&#x672B;&#x5C3E;&#x7ED3;&#x675F;</span>
+<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;[2,3,4,5,6] &#x539F;&#x6570;&#x7EC4;&#x53D8;&#x4E3A;ary:[0,1]</span>
+</code></pre>
+<p><code>&#x65B0;&#x589E; &#xFF1A;ary.splice(n,0,x,...)</code></p>
+<p>&#x4ECE;&#x7D22;&#x5F15;n&#x5F00;&#x59CB;&#x4F24;&#x5904;&#x96F6;&#x9879;&#xFF08;&#x6CA1;&#x5220;&#x9664;&#xFF09;&#xFF0C;&#x628A;x&#x6216;&#x8005;&#x66F4;&#x591A;&#x9700;&#x8981;&#x63D2;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x5B58;&#x653E;&#x5230;&#x6570;&#x7EC4;&#x4E2D;&#x7D22;&#x5F15;n&#x7684;&#x201C;&#x524D;&#x9762;&#x201D;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+ary.splice(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-string">&apos;&#x5728;&#x7D22;&#x5F15;1&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&apos;</span>,<span class="hljs-string">&apos;&#x5728;&#x7D22;&#x5F15;1&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&apos;</span>)<span class="hljs-comment">//=&gt;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x5220;&#x9664;&#x9879;&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;[]</span>
+<span class="hljs-comment">//=&gt;&#x6539;&#x53D8;&#x539F;&#x6765;&#x6570;&#x7EC4;  ary:[0, &quot;&#x5728;&#x7D22;&#x5F15;1&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&quot;, &quot;&#x5728;&#x7D22;&#x5F15;1&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&quot;,1, 2, 3, 4, 5, 6]</span>
+</code></pre>
+<p><code>&#x4FEE;&#x6539;&#xFF1A;ary.splice(n,m,x,....)</code></p>
+<p>&#x4FEE;&#x6539;&#x7684;&#x539F;&#x7406;&#x5C31;&#x662F;&#x628A;&#x539F;&#x6709;&#x5185;&#x5BB9;&#x5220;&#x9664;&#x6389;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x65B0;&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x8FD9;&#x90E8;&#x5206;&#x4FE1;&#x606F;&#x5373;&#x53EF;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+ary.splice(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-string">&apos;&#x5F04;&#x5565;&#x561E;&apos;</span>);<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;&#x5220;&#x9664;&#x9879;[2,3,4]</span>
+<span class="hljs-comment">// &#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4; ary:[0,1,&apos;&#x5F04;&#x5565;&#x561E;&apos;,5,6]</span>
+</code></pre>
+<p>&#x7EC3;&#x4E60;&#xFF1A;</p>
+<ol>
+<li>&#x5220;&#x9664;&#x6570;&#x7EC4;&#x6700;&#x540E;&#x4E00;&#x9879;&#x7684;&#x65B9;&#x6CD5;&#xFF1F;</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+<span class="hljs-number">1.</span> ary.pop()<span class="hljs-comment">//&#x8FD4;&#x56DE;6,     ary:[0,1,2,3,4,5]</span>
+<span class="hljs-number">2.</span> ary.splice(ary.length<span class="hljs-number">-1</span>) <span class="hljs-comment">//&#x8FD4;&#x56DE;[5],     ary:[0,1,2,3,4]</span>
+<span class="hljs-number">3.</span> ary.length-- <span class="hljs-comment">//&#x8FD4;&#x56DE;5&#xFF08;&#x539F;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF09;,     ary:[0,1,2,3]</span>
+------&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x4E0D;&#x5EFA;&#x8BAE;------
+&#x4E0D;&#x5EFA;&#x8BAE;&#x57FA;&#x4E8E;<span class="hljs-keyword">delete</span>&#x5220;&#x9664;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x9879;&#xFF0C;&#x867D;&#x7136;&#x5185;&#x5BB9;&#x6CA1;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x6570;&#x7EC4;&#x7684;length&#x957F;&#x5EA6;&#x6CA1;&#x6709;&#x6539;&#x53D8;
+<span class="hljs-number">4.</span> <span class="hljs-keyword">delete</span> ary[ary.length<span class="hljs-number">-1</span>]<span class="hljs-comment">//&#x8FD4;&#x56DE;true ary:[0,1,2] len&#xFF1A;4</span>
+</code></pre>
+<ol>
+<li>&#x6570;&#x7EC4;&#x6700;&#x540E;&#x4E00;&#x9879;&#x6DFB;&#x52A0;&#x5185;&#x5BB9;&#x7684;&#x65B9;&#x6CD5;?</li>
+</ol>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+<span class="hljs-number">1.</span> ary.push(<span class="hljs-number">100</span>); <span class="hljs-comment">//&#x8FD4;&#x56DE; 8-&gt;&#x589E;&#x52A0;&#x540E;&#x7684;&#x957F;&#x5EA6;&#xFF0C;</span>
+<span class="hljs-number">2.</span> ary.splice(ary.length,<span class="hljs-number">0</span>,<span class="hljs-number">100</span>);<span class="hljs-comment">//&#x8FD4;&#x56DE;[],&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x5220;&#x9664;&#x9879;&#x3002;</span>
+<span class="hljs-number">3.</span> ary[ary.length]=<span class="hljs-number">100</span>;<span class="hljs-comment">//&#x8FD4;&#x56DE;100 -&gt;&#x6DFB;&#x52A0;&#x7684;&#x503C;&#x3002;</span>
+</code></pre>
+<p><strong>slice</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5728;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x6309;&#x7167;&#x6761;&#x4EF6;&#x67E5;&#x627E;&#x51FA;&#x5176;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;</p>
+<p>&#x53C2;&#x6570; : &#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF08;n/m&#xFF09;&#xFF0C;&#x4ECE;&#x7D22;&#x5F15;n&#x5F00;&#x59CB;&#xFF0C;&#x627E;&#x5230;&#x7D22;&#x5F15;m&#x5904;&#xFF0C;&#x5355;&#x6570;&#x4E0D;&#x5305;&#x542B;m</p>
+<p>&#x8FD4;&#x56DE; : &#x4EE5;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#x5B58;&#x50A8;&#x67E5;&#x627E;&#x7684;&#x5185;&#x5BB9;&#x539F;&#x6709;&#x6570;&#x7EC4;&#x4E0D;&#x4F1A;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>]
+ary.slice(<span class="hljs-number">2</span>,<span class="hljs-number">7</span>)<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;:[2,3,4,5,6] &#x4E0D;&#x5305;&#x542B;m&#x5904;</span>
+ary.slice(<span class="hljs-number">2</span>)<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;:[2,3,4,5,6,7,8,9] &#x4E0D;&#x5199;m&#xFF0C;&#x5219;&#x67E5;&#x627E;&#x5230;&#x6570;&#x7EC4;&#x672B;&#x5C3E;</span>
+ary.slice(<span class="hljs-number">0</span>) &amp;&amp; ary.slice()<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;:[0,1,2,3,4,5,6,7,8,9]</span>
+<span class="hljs-comment">//&#x5B9E;&#x73B0;&#x6570;&#x7EC4;&#x7684;&#x514B;&#x9686;&#xFF1A;&#x514B;&#x9686;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x51FA;&#x6765;&#xFF0C;&#x548C;&#x539F;&#x6CB9;&#x6570;&#x7EC4;&#x5185;&#x5BB9;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x662F;&#x76F8;&#x540C;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x662F;&#x4E0D;&#x76F8;&#x7B49;&#x72EC;&#x7ACB;&#x7684;</span>
+ary.slice(<span class="hljs-number">-3</span>&#xFF0C;<span class="hljs-number">-1</span>)<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;[7,8] &#x652F;&#x6301;&#x8D1F;&#x6570;&#x7D22;&#x5F15;&#xFF0C;&#x8D1F;&#x6570;&#x8FD0;&#x7B97;&#x89C4;&#x5219;&#xFF1A;&#x6570;&#x7EC4;&#x603B;&#x957F;&#x5EA6;+&#x8D1F;&#x6570;&#x7D22;&#x5F15;</span>
+</code></pre>
+<p><strong>concat</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x6570;&#x7EC4;&#xFF08;&#x6216;&#x8005;&#x503C;&#xFF09;&#x7684;&#x62FC;&#x63A5;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x503C;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x62FC;&#x63A5;&#x540E;&#x7684;&#x65B0;&#x6570;&#x7EC4;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x4E0D;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary1=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>];
+<span class="hljs-keyword">var</span> ary2=[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+<span class="hljs-keyword">var</span> ary3=[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>];
+ary1.concat(ary2,<span class="hljs-string">&apos;&#x54C8;&#x54C8;&apos;</span>,ary3)<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;[1, 2, 3, 4, 5, 6, &quot;&#x54C8;&#x54C8;&quot;, 7, 8, 9]</span>
+[].concat(ary1,ary2,<span class="hljs-string">&apos;haha&apos;</span>,ary3)<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;[1, 2, 3, 4, 5, 6, &quot;&#x54C8;&#x54C8;&quot;, 7, 8, 9] &#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x7A7A;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x76AE;&#x8282;&#x7684;&#x5F00;&#x59CB;&#xFF0C;&#x5728;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x6392;&#x5217;&#x62FC;&#x63A5;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x7A7A;&#x6570;&#x7EC4;&#x4E0D;&#x4F1A;&#x5360;&#x636E;&#x5185;&#x5BB9;&#x7684;&#x4F4D;&#x7F6E;</span>
+</code></pre>
+<p><strong>toString</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x65E0;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x4E0D;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>];
+ary.toString()<span class="hljs-comment">//=&gt;&#x8FD4;&#x56DE;&quot;1,2,3&quot; &#x539F;&#x6570;&#x7EC4;&#x4E0D;&#x53D8;</span>
+</code></pre>
+<p><strong>join</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x548C;tosTring&#x7C7B;&#x4F3C;&#xFF0C;&#x4E5F;&#x662F;&#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x540E;&#xFF0C;&#x6BCF;&#x4E00;&#x9879;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#x7B26;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x6307;&#x5B9A;&#x7684;&#x8FDE;&#x63A5;&#x7B26;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x4E0D;&#x53D8; </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+ary.join() &amp;&amp; ary.join(<span class="hljs-string">&apos;,&apos;</span>)<span class="hljs-comment">//=&gt;&quot;1,2,3,4,5,6&quot;</span>
+ary.join(<span class="hljs-string">&quot;+&quot;</span>)<span class="hljs-comment">//&#x8F93;&#x51FA;&quot;1+2+3+4+5+6&quot;</span>
+<span class="hljs-built_in">eval</span>(ary.join(<span class="hljs-string">&quot;+&quot;</span>))<span class="hljs-comment">// 21 &#x57FA;&#x4E8E;join&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E00;&#x9879;&#x6C42;&#x548C;&#x7684;&#x529F;&#x80FD;</span>
+<span class="hljs-number">1.</span> &#x57FA;&#x4E8E;join&#xFF0C;&#x4F7F;&#x7528;+&#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x5148;&#x628A;&#x6570;&#x7EC4;&#x53D8;&#x4E3A;&#x6BCF;&#x4E00;&#x9879;&#x76F8;&#x52A0;&#x7684;&#x5B57;&#x7B26;&#x4E32;
+<span class="hljs-number">2.</span> &#x57FA;&#x4E8E;<span class="hljs-built_in">eval</span>&#xFF0C;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x53D8;&#x4E3A;JS&#x8868;&#x8FBE;&#x5F0F;&#x6267;&#x884C;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E00;&#x9879;&#x7D2F;&#x52A0;&#x7684;&#x548C;
+</code></pre>
+<p><strong>reverse</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x628A;&#x6570;&#x7EC4;&#x5012;&#x8FC7;&#x6765;&#x6392;&#x5217;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x65E0;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x6392;&#x5217;&#x540E;&#x7684;&#x65B0;&#x6570;&#x7EC4;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x6539;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary =[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>];
+ary.reverse()<span class="hljs-comment">//&#x8FD4;&#x56DE;[5,4,3,2,1]   ary:[5,4,3,2,1]</span>
+</code></pre>
+<p><strong>sort</strong></p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x7ED9;&#x6570;&#x7EC4;&#x6392;&#x5E8F;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x65E0;/&#x51FD;&#x6570;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x65B0;&#x6570;&#x7EC4;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x6539;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//=&gt;sort&#x5728;&#x4E0D;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x80FD;&#x5904;&#x7406;10&#x4EE5;&#x5185;&#x6570;&#x5B57;&#x6392;&#x5E8F;</span>
+<span class="hljs-keyword">var</span> ary = [<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>]
+ary.sort()<span class="hljs-comment">//&#x8FD4;&#x56DE;[1, 2, 3, 4, 5, 6, 7]</span>
+<span class="hljs-keyword">var</span> ary=[<span class="hljs-number">18</span>,<span class="hljs-number">1</span>,<span class="hljs-number">23</span>,<span class="hljs-number">4543</span>,<span class="hljs-number">21</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>];
+ary.sort()<span class="hljs-comment">//&#x8FD4;&#x56DE;[1, 18, 21, 23, 3, 4, 4543] &#x5E76;&#x6CA1;&#x6709;&#x6309;&#x7167;&#x6211;&#x4EEC;&#x60F3;&#x8C61;&#x7684;&#x6392;&#x5E8F;</span>
+
+<span class="hljs-comment">//=&gt;&#x771F;&#x5B9E;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x57FA;&#x4E8E;sort&#x6392;&#x5E8F;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x9700;&#x8981;&#x4F20;&#x9012;&#x53C2;&#x6570;</span>
+<span class="hljs-keyword">var</span> ary = [<span class="hljs-number">18</span>,<span class="hljs-number">1</span>,<span class="hljs-number">23</span>,<span class="hljs-number">4543</span>,<span class="hljs-number">21</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>];
+ary.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a,b</span>)</span>{
+    <span class="hljs-keyword">return</span> a-b;<span class="hljs-comment">//&#x5347;&#x5E8F;</span>
+    <span class="hljs-keyword">return</span> b-a;<span class="hljs-comment">//&#x964D;&#x5E8F;</span>
+})
+</code></pre>
+<p><strong>indexOf / lastIndexOf</strong></p>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6848;&#x4E0D;&#x517C;&#x5BB9;IE&#x4F4E;&#x7248;&#x672C;&#x6D4F;&#x89C8;&#x5668;&#xFF08;IE6~8&#xFF09;</p>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x68C0;&#x6D4B;&#x5F53;&#x524D;&#x503C;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x6B21;&#x6216;&#x8005;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x4F4D;&#x7F6E;&#x7684;&#x7D22;&#x5F15;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x68C0;&#x6D4B;&#x7684;&#x503C;</p>
+<p>&#x8FD4;&#x56DE;&#xFF1A;&#x7D22;&#x5F15;</p>
+<p>&#x539F;&#x6709;&#x6570;&#x7EC4;&#x4E0D;&#x53D8;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>];
+ary.indexOf(<span class="hljs-number">3</span>)<span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7D22;&#x5F15;2 &#x57FA;&#x4E8E;indexOf&#x68C0;&#x6D4B;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x7EC4;&#x4E2D;&#x6709;&#x7740;&#x4E00;&#x9879;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x96F6;&#x7684;&#x7D22;&#x5F15;</span>
+ary.indexOf(<span class="hljs-number">100</span>)<span class="hljs-comment">//&#x8FD4;&#x56DE;-1 &#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x7684;&#x7D22;&#x5F15;&#x4E3A;-1</span>
+<span class="hljs-comment">//&#x9A8C;&#x8BC1;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B;&#x67D0;&#x4E00;&#x9879;</span>
+<span class="hljs-keyword">if</span>(ary.indexOf(<span class="hljs-number">100</span>)&gt;<span class="hljs-number">1</span>){
+    <span class="hljs-comment">//=&gt;ARY&#x4E2D;&#x5305;&#x542B;100&#x8FD9;&#x4E00;&#x9879;</span>
+}
+</code></pre>
+<p>&#x9664;&#x4E86;&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x8FD8;&#x5305;&#x542B;&#x5F88;&#x591A;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF08;Array.prototype&#xFF09;</p>
+<ul>
+<li>every</li>
+<li>filter</li>
+<li>find</li>
+<li>forEach</li>
+<li>includes</li>
+<li>keys</li>
+<li>map</li>
+<li>reduce / reduceRight</li>
+<li>some</li>
+<li>...  </li>
+</ul>
+<p>&#x641E;&#x61C2;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4E86;&#x89E3;OPP/&#x4F5C;&#x7528;&#x57DF;/&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7B49;</p>
+<h3 id="&#x6570;&#x7EC4;&#x53BB;&#x91CD;">&#x6570;&#x7EC4;&#x53BB;&#x91CD;</h3>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x8017;&#x6027;&#x80FD;</span>
+
+<span class="hljs-comment">//&#x65B9;&#x6CD5;&#x4E00;</span>
+<span class="hljs-keyword">var</span> ary = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>];
+<span class="hljs-comment">// =&gt;i&lt;ary.length-1&#xFF1B;&#x4E0D;&#x7528;&#x62FF;&#x6700;&#x540E;&#x4E00;&#x9879;</span>
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;i&lt;ary.length<span class="hljs-number">-1</span>;i++){
+    <span class="hljs-keyword">var</span> item = ary[i];
+    <span class="hljs-comment">//=&gt;item; &#x4F9D;&#x6B21;&#x62FF;&#x51FA;&#x7684;&#x6BCF;&#x4E00;&#x9879;</span>
+    <span class="hljs-comment">//=&gt;i;&#x5F53;&#x524D;&#x62FF;&#x51FA;&#x7684;&#x9879;&#x7684;&#x7D22;&#x5F15;</span>
+    <span class="hljs-comment">//=&gt;&#x548C;&#x5F53;&#x524D;&#x9879;&#x540E;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x6BD4;&#x8F83;&#xFF1A;&#x8D77;&#x59CB;&#x7D22;&#x5F15;&#x5E94;&#x8BE5;&#x662F;i+1  j&lt;ary.length&#x627E;&#x5230;&#x672B;&#x5C3E;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> j = i+<span class="hljs-number">1</span>;j&lt;ary.length;j++){
+        <span class="hljs-comment">//=&gt;ary[j]:&#x540E;&#x9762;&#x9700;&#x8981;&#x62FF;&#x51FA;&#x6765;&#x548C;&#x5F53;&#x524D;&#x9879;&#x6BD4;&#x8F83;&#x7684;&#x8FD9;&#x4E2A;&#x503C;</span>
+        <span class="hljs-keyword">if</span>(item==ary[j]){
+            <span class="hljs-comment">//=&gt;&#x76F8;&#x7B49;&#xFF1A;&#x91CD;&#x590D;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x62FF;&#x51FA;&#x6765;&#x7684;j&#x8FD9;&#x4E2A;&#x6BD4;&#x8F83;&#x9879;&#x5728;&#x539F;&#x6709;&#x6570;&#x7EC4;&#x4E2D;&#x5220;&#x9664;</span>
+           <span class="hljs-comment">// ary.splice(j,1);</span>
+            <span class="hljs-comment">/*&#x8FD9;&#x91CC;&#x5220;&#x9664;&#x540E;&#x4F1A;&#x5BFC;&#x81F4;&#x6570;&#x7EC4;&#x584C;&#x9677;&#x95EE;&#x9898;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x628A;&#x5F53;&#x524D;&#x9879;&#x5220;&#x9664;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x9879;&#x90FD;&#x8981;&#x5411;&#x524D;&#x8FDB;&#x4E00;&#x4F4D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x539F;&#x6570;&#x7EC4;&#x7684;&#x7D22;&#x5F15;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#xFF0C;&#x7D22;&#x5F15;&#x90FD;&#x4F1A;&#x51CF;-1&#xFF0C;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x7EE7;&#x7EED;j+1&#xFF0C;&#x4E0B;&#x6B21;&#x518D;&#x62FF;&#x51FA;&#x6765;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x4F1A;&#x8DF3;&#x8FC7;&#x4E00;&#x4F4D;&#x3002;
+            &#x539F;&#x6570;&#x7EC4; [1,2,3,4]
+            i=1 =&gt;2 &#x6211;&#x4EEC;&#x628A;&#x8FD9;&#x4E00;&#x9879;&#x5E72;&#x6389;&#xFF0C;&#x7136;&#x540E;i++&#xFF0C;i=2
+            &#x539F;&#x6570;&#x7EC4;[1,3,4]
+            i=2&#x8FD9;&#x4E00;&#x9879;&#x662F;4&#xFF0C;3&#x8FD9;&#x4E00;&#x9879;&#x5C31;&#x9519;&#x8FC7;&#x4E86;
+            */</span>
+            ary.splice(k,<span class="hljs-number">1</span>);<span class="hljs-comment">//&#x5220;&#x9664;&#x540E;&#x4E0D;&#x8BA9;K&#x7D2F;&#x52A0;</span>
+
+            k--;<span class="hljs-comment">//&#x5220;&#x9664;&#x540E;&#x5148;&#x51CF;&#x51CF;&#xFF0C;&#x518D;&#x52A0;&#x52A0;&#x7684;&#x65F6;&#x5019;&#x76F8;&#x5F53;&#x4E8E;&#x6CA1;&#x52A0;&#x6CA1;&#x51CF;</span>
+        }
+    }
+}
+<span class="hljs-comment">//&#x65B9;&#x6CD5;&#x4E8C;</span>
+ <span class="hljs-keyword">var</span> ary = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+    <span class="hljs-keyword">var</span> obj = {};
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; ary.length; i++) {
+        <span class="hljs-keyword">var</span> item = ary[i];
+        <span class="hljs-comment">//=&gt;&#x5B58;&#x50A8;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x505A;&#x5224;&#x65AD;:&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E86;&#xFF0C;&#x8BF4;&#x660E;&#x5F53;&#x524D;item&#x518D;&#x4E4B;&#x524D;&#x51FA;&#x73B0;&#x8FC7;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x9879;&#x91CD;&#x590D;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x5F53;&#x524D;&#x9879;&#x5220;&#x9664;</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> obj[item] === <span class="hljs-string">&quot;undefined&quot;</span>) {
+            obj[item] = item;<span class="hljs-comment">//=&gt;obj[1]=1 =&gt;{1:1}</span>
+            <span class="hljs-keyword">continue</span>;
+            <span class="hljs-comment">// &#x8FD9;&#x79CD;&#x5220;&#x9664;&#x65B9;&#x5F0F;&#x4E0D;&#x597D;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x7EC4;&#x5F88;&#x957F;&#xFF0C;&#x6211;&#x4EEC;&#x5220;&#x9664;&#x67D0;&#x4E00;&#x9879;&#xFF0C;&#x540E;&#x9762;&#x7D22;&#x5F15;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x673A;&#x9009;&#xFF0C;&#x975E;&#x5E38;&#x8017;&#x6027;&#x80FD;</span>
+        }
+        ary.splice(i, <span class="hljs-number">1</span>);
+         i--;<span class="hljs-comment">//&#x9632;&#x6B62;&#x6570;&#x7EC4;&#x584C;&#x9677;</span>
+    }
+</code></pre>
+<p><code>ES6&#x65B9;&#x6CD5;&#xFF0C;&#x6709;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ary = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+<span class="hljs-keyword">var</span> newAry = <span class="hljs-built_in">Array</span>.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(ary))
+<span class="hljs-comment">//newAry: [1, 2, 4, 5, 3, 6]</span>
+</code></pre>
+<h4 id="&#x6570;&#x7EC4;&#x53BB;&#x91CD;&#x63A8;&#x8350;&#x65B9;&#x6CD5;">&#x6570;&#x7EC4;&#x53BB;&#x91CD;&#x63A8;&#x8350;&#x65B9;&#x6CD5;</h4>
+<pre><code class="lang-javascript"><span class="hljs-number">1.</span>
+  <span class="hljs-keyword">var</span> ary = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+    <span class="hljs-keyword">var</span> obj = {};
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; ary.length; i++) {
+        <span class="hljs-keyword">var</span> item = ary[i];
+        <span class="hljs-comment">//=&gt;&#x5B58;&#x50A8;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x505A;&#x5224;&#x65AD;:&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E86;&#xFF0C;&#x8BF4;&#x660E;&#x5F53;&#x524D;item&#x518D;&#x4E4B;&#x524D;&#x51FA;&#x73B0;&#x8FC7;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x9879;&#x91CD;&#x590D;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x5F53;&#x524D;&#x9879;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x9879;&#x5185;&#x5BB9;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6700;&#x540E;&#x4E00;&#x9879;&#x5220;&#x6389;&#xFF0C;&#x7136;&#x540E;i--,&#x91CD;&#x65B0;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x9879;</span>
+        <span class="hljs-comment">//&#x8FD9;&#x6837;&#x4E0D;&#x5F71;&#x54CD;&#x7D22;&#x5F15;&#xFF0C;&#x4E0D;&#x8017;&#x6027;&#x80FD;</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> obj[item] !== <span class="hljs-string">&quot;undefined&quot;</span>) {
+            ary[i] = ary[ary.length - <span class="hljs-number">1</span>]
+            ary.pop();
+            i--;
+            <span class="hljs-keyword">continue</span>;
+        }
+        obj[item] = item;
+    }
+    <span class="hljs-built_in">console</span>.log(ary)
+
+<span class="hljs-number">2.</span>
+ <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#xFF0C;&#x5224;&#x65AD;&#x65B0;&#x6570;&#x7EC4;&#x6709;&#x65E0;&#xFF0C;&#x65E0;&#x5219;&#x6DFB;&#x52A0;&#xFF0C;&#x6709;&#x5219;&#x8DF3;&#x8FC7;&#x8FDB;&#x884C;&#x4E0B;&#x6B21;&#x5FAA;&#x73AF;</span>
+     <span class="hljs-keyword">var</span> ary = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+     <span class="hljs-keyword">var</span> newAry = [];
+     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; ary.length; i++) {
+         <span class="hljs-keyword">if</span>(newAry.indexOf(ary[i])&gt;<span class="hljs-number">-1</span>){
+             <span class="hljs-keyword">continue</span>
+         }
+         newAry.push(ary[i])
+     }
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="数据类型.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 数据类型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数组方法","level":"1.2.9","depth":2,"previous":{"title":"数据类型","level":"1.2.8","depth":2,"path":"JavaScript/数据类型.md","ref":"JavaScript/数据类型.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScript/数组方法.md","mtime":"2020-02-22T15:19:06.356Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-23T01:49:05.274Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
